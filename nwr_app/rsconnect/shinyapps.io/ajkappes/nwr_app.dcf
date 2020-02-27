@@ -1,0 +1,10 @@
+name: nwr_app
+title:
+username:
+account: ajkappes
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1875405
+bundleId: 2835723
+url: https://ajkappes.shinyapps.io/nwr_app/
+when: 1582841980.41033
