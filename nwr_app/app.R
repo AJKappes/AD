@@ -89,12 +89,12 @@ ui <- fluidPage(
                     tags$p(textOutput('ADout4')),
                     tags$p(textOutput('ADout5')),
                     tags$p(textOutput('ADout6')),
-                    tags$p(textOutput('ADout7'))
+                    tags$p(textOutput('ADout7')),
+                    tags$p(textOutput('ADout8')),
+                    tags$p(textOutput('ADout9'))
                       
                     )
                
-               
-             
              )
     
     )
@@ -120,11 +120,13 @@ server <- function(input, output){
     
   })
   
+  
   output$ADout2 <- renderPrint({
     
     cat('Phosphorus lbs/acre from total AD output:', fun()[[2]])
     
   })
+  
   
   output$ADout3 <- renderPrint({
     
@@ -146,13 +148,25 @@ server <- function(input, output){
   
   output$ADout6 <- renderPrint({
     
-    cat('Revenue from tipping fees:', '$', fun()[[6]])
+    cat('Total AD nitrogen output:', fun()[[6]], 'lbs')
     
   })
   
   output$ADout7 <- renderPrint({
     
-    cat('Approximate energy produced from total input biogas potential:', fun()[[7]], 'kWh')
+    cat('Nitrogen lbs/acre from total AD output:', fun()[[7]])
+    
+  })
+  
+  output$ADout8 <- renderPrint({
+    
+    cat('Revenue from tipping fees:', '$', fun()[[8]])
+    
+  })
+  
+  output$ADout9 <- renderPrint({
+    
+    cat('Approximate energy produced from total input biogas potential:', fun()[[9]], 'kWh')
     
   })
   
